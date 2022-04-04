@@ -1,0 +1,55 @@
+{
+  "name": "akarakhanova-fr_16",
+  "version": "1.0.0",
+  "description": "FR_16 akarakhanova",
+  "main": "index.js",
+  "scripts": {
+    "first-start": "npm install && node index.js",
+    "start": "node index.js",
+    "serve": "nodemon -L --delay 500ms index.js",
+    "test": "jest",
+    "test-cov": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitlab.dataart.com/dae/njsa/akarakhanova-fr_16.git"
+  },
+  "author": "akarakhanova",
+  "devDependencies": {
+    "@types/node": "^16.11.12",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.25.2",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.13",
+    "supertest": "^6.1.6"
+  },
+  "dependencies": {
+    "vm2": "^3.9.5"
+  },
+  "jest": {
+    "clearMocks": true,
+    "moduleFileExtensions": [
+      "js"
+    ],
+    "roots": [
+      "<rootDir>/src"
+    ],
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js"
+    ],
+    "coveragePathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "src/tests"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 90,
+        "functions": 90,
+        "lines": 90,
+        "statements": 90
+      }
+    }
+  }
+}
